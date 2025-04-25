@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاختبارات المعتمدة | منصة المعرفة الشاملة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4HH1RBVMRK"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4HH1RBVMRK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4HH1RBVMRK');
+</script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="index.html">منصة المعرفة الشاملة</a></h1>
+            <p>الاختبارات المعتمدة والمهنية</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="ai.html">الذكاء الاصطناعي</a></li>
+                <li><a href="courses.html">الكورسات</a></li>
+                <li><a href="tests.html" class="active">الاختبارات</a></li>
+                <li><a href="numbers.html">الأرقام الهامة</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2><i class="fas fa-clipboard-check"></i> الاختبارات المعتمدة</h2>
+            
+            <!-- أزرار التصفية: تتحكم في إظهار/إخفاء الاختبارات بناءً على الفئة -->
+            <div class="test-categories">
+                <button class="category-btn active" data-category="all">الكل</button>
+                <button class="category-btn" data-category="iq">اختبارات عقلية</button>
+                <button class="category-btn" data-category="psychological">اختبارات نفسية</button>
+                <button class="category-btn" data-category="general">معلومات عامة</button>
+                <button class="category-btn" data-category="languages">اختبارات لغات</button>
+                <button class="category-btn" data-category="personal">اختبارات شخصية</button>
+            </div>
+            
+            <!-- حاوية الاختبارات: كل بطاقة لها data-category للتصفية -->
+            <div class="tests-container">
+                <!-- اختبارات الذكاء (IQ) -->
+                <div class="test-card" data-category="iq">
+                    <h3>اختبار الذكاء المتقدم IQ TEST</h3>
+                    <p>قياس مستوى الذكاء العام وفق معايير منسا العالمية</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 30 سؤالاً</span>
+                        <span><i class="fas fa-clock"></i> 20 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="iqTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="iq">
+                    <h3>اختبار IQ معتمد</h3>
+                    <p>قياس مستوى الذكاء العام وفق معايير منسا العالمية</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 15 سؤالاً</span>
+                        <span><i class="fas fa-clock"></i> 20 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="iqTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="iq">
+                    <h3>اختبار الذاكرة المعتمد</h3>
+                    <p>قياس قدرات الذاكرة وتقديم نصائح لتحسينها</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 10 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="memoryTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="iq">
+                    <h3>اختبار الذكاء العاطفي</h3>
+                    <p>قياس القدرة على فهم وإدارة المشاعر</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 8 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="emotionalIntelligenceTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="iq">
+                    <h3>اختبار الذكاء الاجتماعي</h3>
+                    <p>قياس القدرة على التفاعل مع الآخرين</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 8 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="socialIntelligenceTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="iq">
+                    <h3>اختبار الذكاء البصري المكاني</h3>
+                    <p>قياس القدرة على فهم العلاقات المكانية</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 10 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="spatialIntelligenceTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="iq">
+                    <h3>اختبار الذكاء المنطقي الرياضي</h3>
+                    <p>قياس القدرة على حل المشكلات المنطقية</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 10 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="logicalIntelligenceTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="iq">
+                    <h3>اختبار الذكاء الموسيقي</h3>
+                    <p>قياس القدرة على فهم وتذوق الموسيقى</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 8 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="musicalIntelligenceTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="iq">
+                    <h3>اختبار الذكاء الطبيعي</h3>
+                    <p>قياس المعرفة بالطبيعة والبيئة</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 10 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="naturalistIntelligenceTest">ابدأ الاختبار</button>
+                </div>
+
+                <!-- اختبارات نفسية -->
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار الاكتئاب المعتمد</h3>
+                    <p>تقييم أعراض الاكتئاب وفق معايير PHQ-9 معدل</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 12 سؤالاً</span>
+                        <span><i class="fas fa-clock"></i> 10 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="depressionTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار القلق المعتمد</h3>
+                    <p>تقييم مستوى القلق وفق معايير GAD-7 المعدلة</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 8 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="anxietyTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار إدارة الغضب</h3>
+                    <p>تقييم قدراتك على التحكم في الغضب وتقديم نصائح لتحسينها</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 5 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="angerManagementTest232">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار الاحتراق النفسي</h3>
+                    <p>تقييم مستوى الإرهاق النفسي الناتج عن العمل أو الدراسة</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 5 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="burnoutTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار أنماط التعلق</h3>
+                    <p>تحديد نمط التعلق الخاص بك في العلاقات الشخصية</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 5 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="attachmentStyleTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار المرونة النفسية</h3>
+                    <p>تقييم قدرتك على التكيف مع التحديات والصعوبات</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 5 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="resilienceTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار الرضا الوظيفي</h3>
+                    <p>تقييم مستوى رضاك عن بيئة العمل والوظيفة</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 5 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="jobSatisfactionTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار السعادة النفسية</h3>
+                    <p>تقييم مستوى الرفاهية النفسية والسعادة العامة</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 5 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="psychologicalWellbeingTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار جودة النوم</h3>
+                    <p>تقييم جودة نومك وتقديم نصائح لتحسينه</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 5 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="sleepQualityTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار مستوى التوتر</h3>
+                    <p>تقييم مستوى التوتر النفسي وتأثيره على حياتك</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 5 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="stressTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار الإدمان على الإنترنت</h3>
+                    <p>تقييم مدى اعتمادك على الإنترنت وتأثيره على حياتك</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 5 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="internetAddictionTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار اضطرابات الأكل</h3>
+                    <p>تقييم العلاقة مع الطعام وصورة الجسم</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 5 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="eatingDisorderTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار اضطراب القلق الاجتماعي</h3>
+                    <p>تقييم مستوى القلق في المواقف الاجتماعية</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 8 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="socialAnxietyTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار اضطراب ما بعد الصدمة</h3>
+                    <p>تقييم أعراض اضطراب ما بعد الصدمة</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 8 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="ptsdTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار اضطراب فرط الحركة ونقص الانتباه</h3>
+                    <p>تقييم أعراض اضطراب فرط الحركة ونقص الانتباه</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 8 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="adhdTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار اضطراب الوسواس القهري</h3>
+                    <p>تقييم أعراض اضطراب الوسواس القهري</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 8 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="ocdTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار اضطراب الشخصية الحدية</h3>
+                    <p>تقييم أعراض اضطراب الشخصية الحدية</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 8 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="borderlinePersonalityTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار التنظيم المعرفي العاطفي</h3>
+                    <p>تقييم قدرتك على تنظيم المشاعر والأفكار</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 8 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="emotionalRegulationTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار التفكير الإيجابي</h3>
+                    <p>تقييم مستوى التفكير الإيجابي والتفاؤل</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 8 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="positiveThinkingTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="psychological">
+                    <h3>اختبار الثقة بالنفس</h3>
+                    <p>تقييم مستوى الثقة بالنفس وتقدير الذات</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 8 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="selfConfidenceTest">ابدأ الاختبار</button>
+                </div>
+
+                <!-- اختبارات معلومات عامة -->
+                <div class="test-card" data-category="general">
+                    <h3>اختبار المعلومات العامة</h3>
+                    <p>قياس المعرفة في مختلف المجالات</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 15 سؤالاً</span>
+                        <span><i class="fas fa-clock"></i> 15 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="generalKnowledgeTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="general">
+                    <h3>اختبار الثقافة التكنولوجية</h3>
+                    <p>قياس المعرفة بالتكنولوجيا الحديثة</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 10 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="techCultureTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="general">
+                    <h3>اختبار الثقافة الصحية</h3>
+                    <p>قياس المعرفة بالمفاهيم الصحية الأساسية</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 10 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="healthTest">ابدأ الاختبار</button>
+                </div>
+
+                <!-- اختبارات لغات -->
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الإنجليزية</h3>
+                    <p>تقييم مستوى اللغة الإنجليزية العام</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 12 سؤالاً</span>
+                        <span><i class="fas fa-clock"></i> 12 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="englishTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الإنجليزية (مبتدئ A1)</h3>
+                    <p>تقييم مستوى اللغة الإنجليزية للمبتدئين</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 12 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="englishBeginnerTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الإنجليزية (متوسط B1)</h3>
+                    <p>تقييم مستوى اللغة الإنجليزية للمتوسطين</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 12 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="englishIntermediateTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الإنجليزية (متقدم C1)</h3>
+                    <p>تقييم مستوى اللغة الإنجليزية للمتقدمين</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 12 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="englishAdvancedTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الإنجليزية الشامل</h3>
+                    <p>تقييم شامل لمستوى اللغة الإنجليزية</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 20 سؤالاً</span>
+                        <span><i class="fas fa-clock"></i> 20 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="comprehensiveEnglishTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الفرنسية</h3>
+                    <p>تقييم مستوى اللغة الفرنسية العام</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 12 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="frenchTest3">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الفرنسية (مبتدئ A1)</h3>
+                    <p>تقييم مستوى اللغة الفرنسية للمبتدئين</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 12 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="frenchBeginnerTest2">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الفرنسية (متوسط B1)</h3>
+                    <p>تقييم مستوى اللغة الفرنسية للمتوسطين</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 12 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="frenchIntermediateTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الفرنسية (متقدم C1)</h3>
+                    <p>تقييم مستوى اللغة الفرنسية للمتقدمين</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 12 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="frenchAdvancedTest1">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الفرنسية الشامل</h3>
+                    <p>تقييم شامل لمستوى اللغة الفرنسية</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 20 سؤالاً</span>
+                        <span><i class="fas fa-clock"></i> 20 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="comprehensiveFrenchTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الإسبانية الشامل</h3>
+                    <p>تقييم شامل لمستوى اللغة الإسبانية</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 20 سؤالاً</span>
+                        <span><i class="fas fa-clock"></i> 20 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="comprehensiveSpanishTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الألمانية</h3>
+                    <p>تقييم مستوى اللغة الألمانية العام</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 12 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="germanTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الألمانية (مبتدئ A1)</h3>
+                    <p>تقييم مستوى اللغة الألمانية للمبتدئين</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 12 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="germanBeginnerTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الألمانية (متوسط B1)</h3>
+                    <p>تقييم مستوى اللغة الألمانية للمتوسطين</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 12 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="germanIntermediateTest2">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الألمانية (متقدم C1)</h3>
+                    <p>تقييم مستوى اللغة الألمانية للمتقدمين</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 12 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="germanAdvancedTest3">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الألمانية الشامل</h3>
+                    <p>تقييم شامل لمستوى اللغة الألمانية</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 20 سؤالاً</span>
+                        <span><i class="fas fa-clock"></i> 20 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="comprehensiveGermanTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="languages">
+                    <h3>اختبار اللغة الصينية الشامل</h3>
+                    <p>تقييم شامل لمستوى اللغة الصينية</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 20 سؤالاً</span>
+                        <span><i class="fas fa-clock"></i> 20 دقيقة</span>
+                    </div>
+                    <button class="start-test" data-test="comprehensiveChineseTest">ابدأ الاختبار</button>
+                </div>
+
+                <!-- اختبارات شخصية -->
+                <div class="test-card" data-category="personal">
+                    <h3>اختبار الشخصية المعتمد</h3>
+                    <p>تحليل نوع الشخصية وفق نموذج MBTI المعدل</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 7 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="personalityTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="personal">
+                    <h3>اختبار التوافق الزواجي</h3>
+                    <p>تقييم مستوى التوافق بين الشريكين</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 8 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="marriageCompatibilityTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="personal">
+                    <h3>اختبار الميول المهنية</h3>
+                    <p>تحديد الميول المهنية والوظائف المناسبة</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        <span><i class="fas fa-clock"></i> 8 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="careerTest">ابدأ الاختبار</button>
+                </div>
+                <div class="test-card" data-category="personal">
+                    <h3>اختبار الشخصية (العوامل الخمسة الكبرى)</h3>
+                    <p>تقييم الشخصية وفق نموذج العوامل الخمسة الكبرى</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 16 سؤالاً</span>
+                        <span><i class="fas fa-clock"></i> 10 دقائق</span>
+                    </div>
+                    <button class="start-test" data-test="bigFiveTest">ابدأ الاختبار</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- نافذة الاختبار -->
+        <div class="test-modal" id="testModal">
+            <div class="modal-content">
+                <span class="close-modal">×</span>
+                <h2 id="testTitle">اختبار الاكتئاب المعتمد</h2>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                    <span id="progressText">1/12</span>
+                </div>
+                
+                <div class="question-container" id="questionContainer">
+                    <!-- الأسئلة ستظهر هنا -->
+                </div>
+                
+                <div class="test-actions">
+                    <button id="prevQuestion" disabled>السابق</button>
+                    <button id="nextQuestion">التالي</button>
+                    <button id="submitTest" style="display: none;">إظهار النتيجة</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- نافذة النتائج -->
+        <div class="result-modal" id="resultModal">
+            <div class="modal-content">
+                <span class="close-modal">×</span>
+                <h2 id="resultTitle">نتيجة اختبار الاكتئاب المعتمد</h2>
+                
+                <div class="result-score">
+                    <div class="score-circle" id="scoreCircle">
+                        <span id="scoreValue">75</span>%
+                    </div>
+                    <p id="scoreDescription">درجتك تشير إلى وجود أعراض متوسطة للاكتئاب</p>
+                </div>
+                
+                <div class="result-details">
+                    <h3><i class="fas fa-lightbulb"></i> نصائح وتوصيات</h3>
+                    <div id="adviceContent">
+                        <!-- النصائح ستظهر هنا -->
+                    </div>
+                </div>
+                
+                <div class="emergency-advice" id="emergencyAdvice">
+                    <h3><i class="fas fa-exclamation-triangle"></i> إرشادات عاجلة</h3>
+                    <div id="emergencyContent">
+                        <!-- الإرشادات العاجلة للاختبارات النفسية -->
+                    </div>
+                </div>
+                <button id="captureResult"><i class="fas fa-camera"></i> حفظ النتيجة</button>
+                
+                <div class="rating-system">
+                    <h4>كيف تقيم هذا الاختبار؟</h4>
+                    <div class="stars">
+                        <i class="fas fa-star" data-rating="1"></i>
+                        <i class="fas fa-star" data-rating="2"></i>
+                        <i class="fas fa-star" data-rating="3"></i>
+                        <i class="fas fa-star" data-rating="4"></i>
+                        <i class="fas fa-star" data-rating="5"></i>
+                    </div>
+                    <p class="rating-feedback">التقييم: <span>0</span>/5</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>تم الإنشاء بواسطة المهندس محمد الجبري</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100010825743574"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/AlgebryMohamed"><i class="fab fa-twitter"></i></a>
+            <a href="https://01281755275.sarhne.com"><i class="fa fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <script src="tests.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'935633f069adafb9',t:'MTc0NTUwNDAyMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>

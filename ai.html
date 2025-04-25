@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نماذج الذكاء الاصطناعي | منصة المعرفة الشاملة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        
+        /* تنسيقات إضافية خاصة بصفحة الذكاء الاصطناعي */
+        .ai-hero {
+            background: linear-gradient(135deg, rgba(67,97,238,0.1), rgba(114,9,183,0.1));
+            padding: 3rem 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .ai-hero h2 {
+            font-size: 2.3rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+        
+        .ai-hero p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .model-card {
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+            background-color: white;
+            position: relative;
+        }
+        
+        .model-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transition: height 0.3s ease;
+        }
+        
+        .model-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .model-card:hover::before {
+            height: 6px;
+        }
+        
+        .model-content {
+            padding: 1.5rem;
+        }
+        
+        .model-card h4 {
+            margin: 0 0 0.8rem 0;
+            color: var(--dark-color);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .model-card h4 i {
+            color: var(--primary-color);
+        }
+        
+        .model-card p {
+            margin: 0 0 1.5rem 0;
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        .model-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .model-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        
+        .model-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            transition: var(--transition);
+            background-color: rgba(67,97,238,0.1);
+            text-decoration: none;
+        }
+        
+        .model-link:hover {
+            color: white;
+            background-color: var(--primary-color);
+            gap: 0.8rem;
+            transform: translateY(-2px);
+        }
+        
+        .model-footer {
+            display: flex;
+            border-top: 1px solid #eee;
+        }
+        
+        .model-footer button {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        
+        .model-footer .try-btn {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .model-footer .try-btn:hover {
+            background-color: rgba(67,97,238,0.05);
+        }
+        
+        .model-footer .details-btn {
+            color: #666;
+            border-right: 1px solid #eee;
+        }
+        
+        .model-footer .details-btn:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .category-header {
+            padding: 1.5rem 2rem;
+            background: linear-gradient(135deg, rgba(67,97,238,0.1), rgba(114,9,183,0.1));
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .category-header h3 {
+            margin: 0;
+            color: var(--dark-color);
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .category-header .category-badge {
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .models-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            
+            .model-footer {
+                flex-direction: column;
+            }
+            
+            .model-footer .details-btn {
+                border-right: none;
+                border-top: 1px solid #eee;
+            }
+            
+            .ai-hero h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+     
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4HH1RBVMRK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4HH1RBVMRK');
+</script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="index.html">منصة المعرفة الشاملة</a></h1>
+            <p>استكشف أحدث نماذج الذكاء الاصطناعي</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="ai.html" class="active">الذكاء الاصطناعي</a></li>
+                <li><a href="courses.html">الكورسات</a></li>
+                <li><a href="tests.html">الاختبارات</a></li>
+                <li><a href="numbers.html">الأرقام الهامة</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="ai-hero">
+                <h2><i class="fas fa-robot"></i> نماذج الذكاء الاصطناعي</h2>
+                <p>اكتشف أحدث وأقوى نماذج الذكاء الاصطناعي في مختلف المجالات والتخصصات</p>
+            </div>
+            
+            <div class="search-filter-container">
+                <div class="search-filter">
+                    <input type="text" id="ai-search" placeholder="ابحث باسم النموذج أو الوصف...">
+                    <select id="ai-filter">
+                        <option value="all">جميع الفئات</option>
+                        <option value="text">نصوص وكتابة</option>
+                        <option value="image">تصميم وصور</option>
+                        <option value="audio">أصوات وتحويل نص لصوت</option>
+                        <option value="video">فيديو وتوليد فيديو</option>
+                        <option value="code">برمجة وأكواد</option>
+                        <option value="translate">ترجمة ولغات</option>
+                        <option value="research">بحوث وتحليل بيانات</option>
+                        <option value="assistant">مساعدات ذكية</option>
+                        <option value="chinese">نماذج صينية</option>
+                        <option value="tools">أدوات مساعدة</option>
+                        <option value="medical">نماذج طبية وصحية</option>
+                        <option value="education">تعليم وتعلم</option>
+                        <option value="business">أعمال وتجارة</option>
+                        <option value="finance">مالية واستثمار</option>
+                    </select>
+                    <button class="btn btn-primary" id="search-btn">
+                        <i class="fas fa-search"></i> بحث
+                    </button>
+                </div>
+            </div>
+            
+            <div class="ai-categories">
+                <!-- سيتم ملؤها بواسطة JavaScript -->
+                <div class="category">
+                    <div class="category-header">
+                        <h3><i class="fas fa-comment-dots"></i> نماذج النصوص والكتابة</h3>
+                        <span class="category-badge">12 نموذج</span>
+                    </div>
+                    <div class="models-grid">
+                        <div class="model-card">
+                            <div class="model-content">
+                                <h4><i class="fas fa-comment-alt"></i> ChatGPT</h4>
+                                <p>نموذج الدردشة المتقدم من OpenAI الذي يمكنه فهم وتوليد نصوص تشبه البشر</p>
+                                <div class="model-meta">
+                                    <span><i class="fas fa-star"></i> 4.8</span>
+                                    <span><i class="fas fa-language"></i> متعدد اللغات</span>
+                                    <span><i class="fas fa-calendar-alt"></i> 2023</span>
+                                </div>
+                                <a href="https://chat.openai.com" target="_blank" class="model-link">
+                                    تجربة النموذج <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="model-footer">
+                                <button class="details-btn">
+                                    <i class="fas fa-info-circle"></i> التفاصيل
+                                </button>
+                                <button class="try-btn">
+                                    <i class="fas fa-play"></i> تجربة
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="model-card">
+                            <div class="model-content">
+                                <h4><i class="fas fa-comment-alt"></i> Gemini</h4>
+                                <p>نموذج الذكاء الاصطناعي من جوجل الذي يتفوق في فهم السياق وتوليد الإجابات</p>
+                                <div class="model-meta">
+                                    <span><i class="fas fa-star"></i> 4.7</span>
+                                    <span><i class="fas fa-language"></i> متعدد اللغات</span>
+                                    <span><i class="fas fa-calendar-alt"></i> 2023</span>
+                                </div>
+                                <a href="https://gemini.google.com" target="_blank" class="model-link">
+                                    تجربة النموذج <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="model-footer">
+                                <button class="details-btn">
+                                    <i class="fas fa-info-circle"></i> التفاصيل
+                                </button>
+                                <button class="try-btn">
+                                    <i class="fas fa-play"></i> تجربة
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category">
+                    <div class="category-header">
+                        <h3><i class="fas fa-palette"></i> نماذج التصميم والصور</h3>
+                        <span class="category-badge">8 نماذج</span>
+                    </div>
+                    <div class="models-grid">
+                        <div class="model-card">
+                            <div class="model-content">
+                                <h4><i class="fas fa-image"></i> Midjourney</h4>
+                                <p>نموذج توليد الصور الفنية الذي يمكنه إنشاء صور عالية الجودة بناءً على أوصاف نصية</p>
+                                <div class="model-meta">
+                                    <span><i class="fas fa-star"></i> 4.9</span>
+                                    <span><i class="fas fa-paint-brush"></i> فني</span>
+                                    <span><i class="fas fa-calendar-alt"></i> 2022</span>
+                                </div>
+                                <a href="https://www.midjourney.com" target="_blank" class="model-link">
+                                    تجربة النموذج <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="model-footer">
+                                <button class="details-btn">
+                                    <i class="fas fa-info-circle"></i> التفاصيل
+                                </button>
+                                <button class="try-btn">
+                                    <i class="fas fa-play"></i> تجربة
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="model-card">
+                            <div class="model-content">
+                                <h4><i class="fas fa-image"></i> DALL·E 3</h4>
+                                <p>أحدث إصدار من نموذج توليد الصور من OpenAI بدقة وتفاصيل مذهلة</p>
+                                <div class="model-meta">
+                                    <span><i class="fas fa-star"></i> 4.8</span>
+                                    <span><i class="fas fa-paint-brush"></i> واقعي</span>
+                                    <span><i class="fas fa-calendar-alt"></i> 2023</span>
+                                </div>
+                                <a href="https://openai.com/dall-e" target="_blank" class="model-link">
+                                    تجربة النموذج <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="model-footer">
+                                <button class="details-btn">
+                                    <i class="fas fa-info-circle"></i> التفاصيل
+                                </button>
+                                <button class="try-btn">
+                                    <i class="fas fa-play"></i> تجربة
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>تم الإنشاء بواسطة المهندس محمد الجبري</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100010825743574"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/AlgebryMohamed"><i class="fab fa-twitter"></i></a>
+            <a href="https://01281755275.sarhne.com"><i class="fa fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <script src="ai.js"></script>
+    <script>
+        // كود JavaScript للبحث والتصفية
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('ai-search');
+            const filterSelect = document.getElementById('ai-filter');
+            const searchBtn = document.getElementById('search-btn');
+            
+            function filterModels() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const filterValue = filterSelect.value;
+                const categories = document.querySelectorAll('.category');
+                
+                categories.forEach(category => {
+                    const categoryType = category.querySelector('h3').textContent.toLowerCase();
+                    const shouldShowCategory = filterValue === 'all' || 
+                        (filterValue === 'text' && categoryType.includes('نصوص')) ||
+                        (filterValue === 'image' && categoryType.includes('تصميم')) ||
+                        (filterValue === 'audio' && categoryType.includes('أصوات')) ||
+                        (filterValue === 'video' && categoryType.includes('فيديو')) ||
+                        (filterValue === 'code' && categoryType.includes('برمجة')) ||
+                        (filterValue === 'translate' && categoryType.includes('ترجمة')) ||
+                        (filterValue === 'research' && categoryType.includes('بحوث')) ||
+                        (filterValue === 'assistant' && categoryType.includes('مساعدات')) ||
+                        (filterValue === 'chinese' && categoryType.includes('صينية')) ||
+                        (filterValue === 'medical' && categoryType.includes('نماذج طبية وصحية')) ||
+                        (filterValue === 'education' && categoryType.includes('تعليم وتعلم')) ||
+                        (filterValue === 'business' && categoryType.includes('أعمال وتجارة')) ||
+                        (filterValue === 'finance' && categoryType.includes('مالية واستثمار')) ||
+                        (filterValue === 'tools' && categoryType.includes('أدوات'));
+                
+                    if (shouldShowCategory) {
+                        let hasVisibleModels = false;
+                        const models = category.querySelectorAll('.model-card');
+                        
+                        models.forEach(model => {
+                            const modelName = model.querySelector('h4').textContent.toLowerCase();
+                            const modelDesc = model.querySelector('p').textContent.toLowerCase();
+                            const isMatch = searchTerm === '' || 
+                                          modelName.includes(searchTerm) || 
+                                          modelDesc.includes(searchTerm);
+                            
+                            model.style.display = isMatch ? 'block' : 'none';
+                            if (isMatch) hasVisibleModels = true;
+                        });
+                        
+                        category.style.display = hasVisibleModels ? 'block' : 'none';
+                    } else {
+                        category.style.display = 'none';
+                    }
+                });
+            }
+            
+            searchInput.addEventListener('input', filterModels);
+            filterSelect.addEventListener('change', filterModels);
+            searchBtn.addEventListener('click', filterModels);
+            
+            // تطبيق الفلترة عند تحميل الصفحة
+            filterModels();
+        });
+    </script>
+</body>
+</html>
